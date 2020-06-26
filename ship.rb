@@ -10,9 +10,7 @@ class Ship
         end
     
     def pirates
-        Pirate.all.select do |pirate| 
-            pirate.ship == self 
-        end
+        Pirate.all.select { |pirate| pirate.ship == self }
     end
 
     def oldest_pirate
